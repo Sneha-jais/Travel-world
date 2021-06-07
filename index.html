@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <title>KIET TRAVEL</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      color: black;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .wrapper {
+      /* border : 2px solid #000;  */
+      overflow: hidden;
+    }
+
+    .wrapper div {
+      min-height: 200px;
+      padding: 10px;
+    }
+
+    .item1 {
+      /* background-color: gray; */
+      float: left;
+      /* margin-right:.5vw; */
+      width: 18rem;
+      /* border-right:2px solid #000; */
+    }
+
+    .item2 {
+      /* background-color: white; */
+      overflow: hidden;
+      margin: 10px;
+      /* border:2px dashed #ccc; */
+      min-height: 170px;
+    }
+
+    @media screen and (max-width: 400px) {
+      .item1 {
+        float: none;
+        margin-right: 0;
+        width: auto;
+        border: 0;
+        border-bottom: 2px solid #000;
+      }
+    }
+
+    .item2 img {
+      max-width: 100%;
+      height: auto;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Places</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">restaurant</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Offers
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">10% Off*</a></li>
+              <li><a class="dropdown-item" href="#">25% Off*</a></li>
+              <li><a class="dropdown-item" href="#">50% Off*</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+          <form class="d-flex">
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              style="margin: 0.5vw">
+              Login
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content" style="justify-content: center; background-color: rgb(236, 219, 162);">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" style="justify-content: center;">
+                    <form id="login">
+                      <label>
+
+                        <b>User Name</b><br>
+
+                      </label>
+                      <input type="text" name="uname" id="uname" placeholder="username">
+                      <br><br>
+                      <label>
+                        <b>Password</b>
+                      </label>
+                      <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                      <br><br>
+                      <input type="checkbox" id="check">
+                      <text-align="center" span>Remember Me</span>
+                        <br><br>
+                        <a href="#">Forgot Password</a> <br><br>
+                        <div class="d-grid gap-2">
+                          <button class="btn btn-primary" type="button">LOGIN</button>
+
+                        </div>
+                        <!-- <input type="button" name="login" id="login" value="LOGIN"> -->
+                        <br>
+                    </form>
+                    <br>
+                    <p><B>OR LOGIN WITH</B></p>
+                    <ul>
+                      <li><a href="https://www.linkedin.com/in/angel-baa827205">linkedin</a></li>
+                      <li><a href="https://www.gmail.com/angel?r=nametag"> Gmail</a> </li>
+                      <li><a href="https://www.instagram.com/angel?r=nametag"> Instagram</a> </li>
+
+                      <br>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              style="margin: 0.5vw;">
+              Signup
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h3>REGISTER</h3>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              style="margin: 0.5vw">
+              Booking
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </nav>
+    </div>
+
+  </nav>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+
+  <!--div class="container" style="margin: 0; padding: 0;">
+   
+  </div>
+  <img src="https://www.rajasthandirect.com/wp-content/uploads/2017/06/Delhi-Golden-Triangle-Guide.jpg" alt=""
+    style="width: 100vw;"-->
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="height: 45vw;">
+        <img src="https://indiator.com/tourist-places/wp-content/uploads/2016/02/delhi.jpg" class="d-block w-100"
+          alt="..." style="height: 45vw;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>INDIA GATE</h5>
+          <p>The one who left behind his tale of glory, <br>Your engraved name still tells your story.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 45vw;">
+        <img src="http://cdn.indiamarks.com/wp-content/uploads/red%2Bfort.jpg" class="d-block w-100" alt="..."
+          style="height: 45vw;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>RED FORT</h5>
+          <p>The Red Fort was the residence of the Mughal<br> emperor of India for nearly 200 years.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="height: 45vw;">
+        <img src="http://1.bp.blogspot.com/-t--SFLIIKXc/Ty2BpnBgqII/AAAAAAAAABo/0j33LDegxRA/s1600/Akshardham.jpg"
+          class="d-block w-100" alt="...""  style=" height: 45vw;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>AKSHARDHAM</h5>
+          <p>Collect moments not things.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <p style="text-align: center; font-size: 3vw; color: rgb(153, 0, 255); margin: 0vw 8vw;">Best Places To Visit In Delhi
+  </p>
+  <br><br>
+  <h2 style="text-align: center;">HIGHLIGHTS</h2>
+  <p style="font-size: 1rem; padding: 1.5vw 4vw;">Delhi is both a union territory within India, as well as a city, and
+    features two very
+    different worlds: New Delhi and Old Delhi. The former, inaugurated by the British in 1931 to serve as the imperial
+    capital, is the nation's modern capital and seat of government, while Old Delhi is considered by many as the
+    symbolic heart of the greater metropolitan area. <br>One of the most populous regions in the world, Delhi is a heady
+    mix of tradition and modernity, important as both a religious center and India's busiest international gateway. Its
+    history is as old as the ancient Yamuna River, one of the most sacred rivers in Hinduism and a natural dividing line
+    between New Delhi to the west and Old Delhi to the east.<br>Things to see and do in Delhi and New Delhi are
+    plentiful and include experiencing its diverse arts and crafts industry; its many magnificent monuments; countless
+    performing arts venues; and its excellent cuisine, including delicacies from every corner of India. Delhi is also a
+    shopper's paradise with numerous bazaars and markets, including Chandni Chowk, the country's most famous commercial
+    area.</p>
+  <div class="wrapper">
+    <div class="item1" style=" margin: 1vw 2vw; padding: 1vw;">
+      <h2>More Destinations</h2><br>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.planetware.com/photos-tiles/india-mumbai-top-attractions-visit-gateway-to-india-thumb.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Top-Rated Tourist Attractions in Mumbai
+
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="mumbai.html" class="btn btn-primary">Go To Mumbai</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.planetware.com/photos-tiles/india-agra-top-attractions-taj-mahal-thumb.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Top-Rated Attractions & Places to Visit in Agra
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go To Agra</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.planetware.com/photos-tiles/india-amritsar-top-attractions-golden-temple-thumb.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Top-Rated Attractions & Places to Visit in Amritsar
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go To Amritsar</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.planetware.com/photos-tiles/india-jaipur-top-attractions-galta-ji-thumb.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Top-Rated Attractions & Places to Visit in Jaipur
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go To Jaipur</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.planetware.com/photos-tiles/india-varanasi-best-places-to-visit-ganges-river-thumb.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Best Places to Visit in Varanasi
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go To Varanasi</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.planetware.com/photos-tiles/india-goa-top-attractions-anjuna-market-thumb.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Top-Rated Tourist Attractions in Goa
+
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go To Goa</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.thepalaceonwheels.org/blog/wp-content/uploads/2020/02/Lonavala-1024x685.jpg"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Best Places to Visit in Meghalaya
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go To Meghalaya</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.mYFqj5YqdU228z31lYGjiAEvDN&pid=Api&P=0&w=241&h=164"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Best Places to Visit in Rishikesh
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go To Rishikesh</a>
+        </div>
+      </div>
+      <br>
+      <div class="card" style="width: 18rem;">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.mDoW07IGhC9JZM1xg7AyfwHaE8&pid=Api&P=0&w=236&h=159"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Best Places to Visit in Asam
+          </h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Asam</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="item2" style=" margin: 1vw 2vw; padding: 1vw;">
+      <h2>1.RED FORT</h2>
+      <img src="https://www.planetware.com/photos-large/IND/india-delhi-red-fort.jpg" alt="">
+      <p>The beautiful Red Fort was built by Shah Jahan in 1648 and served as the seat of Mughal power until 1857. This
+        stunning structure, with its tall, red sandstone walls covers an area of more than two square kilometers, the
+        entirety of which is crescent shaped and surrounded by a moat. The impressive main entrance, the Lahore Gate, is
+        so named as it faces towards Lahore in Pakistan, while the even grander Delhi Gate was used by the emperor for
+        ceremonial processions.<br>Entering through the Lahore Gate, visitors reach Chhatta Chowk, a 17th-century
+        covered bazaar where items such as silks, jewelry, gems, and silverware can be purchased, along with souvenirs
+        and food items. The Naubat Khana within the Red Fort once housed the musicians who played for the emperor, and
+        its fine galleries still contain many interesting musical instruments such as kettledrums, gongs, and cymbals.
+        Diwan-i-Am, the Hall of Public Audiences, where the emperor would receive his subjects, is also worth seeing for
+        its stunning white marble.<br>
+      <h3>Address: Netaji Subhash Marg, Chandni Chowk, New Delhi, Delhi 110006</h3>
+      </p><br>
+      <h2>2. Qutub Minar</h2>
+      <img src="https://www.planetware.com/photos-large/IND/india-delhi-qutub-minar.jpg" alt="">
+      <p>Completed in the 12th century, the beautiful Qutub Minar-India's tallest minaret and now a UNESCO Word Heritage
+        Site-attracts many international visitors eager to climb to the top for its breathtaking views of the
+        surrounding area.<br>This ornate five-story tower rises more than 70 meters and is covered with intricate
+        carvings featuring the history of Qutub along with inscriptions from the Koran. It's also notable for being
+        constructed of a number of different types of stone (the first three stories are made of red sandstone, while
+        the fourth and fifth stories were built with marble and sandstone).<br>A variety of other important tombs can be
+        seen in Lodi Gardens, a New Delhi city park that covers some 90 acres of land. This former Lodi site (the Lodi's
+        ruled parts of northern India prior to the 1600s) is a particularly popular spot for residents to stroll, making
+        it an exceptional destination for tourists.<br>
+      <h3>Address: Mehrauli, New Delhi, Delhi 110030</h3>
+      </p><br>
+      <h2>
+        3. India Gate</h2>
+      <img src="https://www.planetware.com/photos-large/IND/india-delhi-india-gate.jpg" alt="">
+      <p>Looking a little like the famous Arc de Triomphe in Paris, the equally impressive India Gate is a magnificent
+        stone arch built as a memorial to Indian soldiers killed in WWI. An eternal flame burns beneath the massive
+        structure, and its walls are inscribed with the names of more than 90,000 soldiers who died in the
+        conflict.<br>Standing on a base of red stone and featuring a shallow domed bowl on top that is occasionally
+        filled with burning oil (usually only on important anniversaries), the structure dominates the parkland around
+        it, an always busy area with crowds of tourists and locals alike enjoying a picnic or simply relaxing. For a
+        real treat, try to see the India Gate at night, considered one of the top free things to do in New Delhi; it's a
+        spectacular sight when it and nearby fountains are floodlit.<br>
+      <h3>Address: Rajpath, India Gate, New Delhi, Delhi 110001 </h3>
+      </p><br>
+      <h2>4. Akshardham</h2>
+      <img src="https://www.planetware.com/photos-large/IND/india-delhi-akshardham.jpg" alt="">
+      <p>Although only recently completed (it opened in 2007), the splendid Hindu Akshardham temple looks like it could
+        be centuries old. Festooned with intricate and elaborate carvings, this magnificent building attracts countless
+        visitors for its majestic beauty.<br>
+
+        Highlights include the stunning 43-meter-high main monument with its rich carvings of animals, plants, gods,
+        dancers, and musicians, all made from pink sandstone and marble. Of particular note are the 234 ornate pillars
+        supporting its nine domes, as well as a stunning stone tribute to elephants, the centerpiece of which is a
+        massive 3,000-ton statue of one of these beasts.<br>
+
+        Other features of interest include a theater showing a movie tracing the building's construction, a fun
+        15-minute boat ride depicting India's rich history and diverse culture, and the spectacular Yagnapurush Kund, a
+        large musical fountain that is a particular treat when lit up at night.
+      <h3>Address: Noida Mor, New Delhi, Delhi 110092</h3>
+      </p><br>
+      <h2>5. Jama Masjid</h2>
+      <img src="https://www.planetware.com/photos-large/IND/india-delhi-jama-masjid.jpg" alt="">
+      <p>The Jama Masjid is one of India's largest mosques and was the final architectural feat of Shah Jahan. Completed
+        in 1658, this beautiful structure features three gateways, four angled towers, and two 40-meter-high minarets
+        built using red sandstone and white marble and attractively alternated in vertical stripes. Visitors can climb
+        to the top of the southern minaret for spectacular views of Old Delhi, and afterwards visit the large central
+        pool used for washing before prayers (visitors must take off their shoes and be appropriately dressed before
+        entering; non-Muslims aren't permitted during prayers).<br>
+
+        Afterwards, be sure to visit Chandni Chowk, Old Delhi's massive main thoroughfare and a market area dedicated to
+        shopping and eating. Of particular interest are Naya Bazaar and Gadodial, famous spice markets where you'll see
+        hundreds of items displayed including aniseed, ginger, pomegranate, saffron, lotus seeds, pickles, and
+        chutneys.<br>
+
+      <h3> Address: Chandni Chowk, New Delhi, Delhi</h3>
+      </p>
+    </div>
+  </div>
+  <div class="containermap">
+    <h3>Find Your Destination Root On Map</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d447986.8531463029!2d76.81115099336583!3d28.69271888103785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfce26ec085ef%3A0x441e32f4fa5002fb!2sRed%20Fort!5e0!3m2!1sen!2sin!4v1622465910473!5m2!1sen!2sin"
+      width="800" height="600" style="border: none; width: 100vw; margin: 1vw; padding: 1vw;" allowfullscreen=""
+      loading="lazy"></iframe>
+  </div>
+  <footer style="background-color: #0d6efd; padding: 1vw;">
+
+    <div class="footer" style="display: flex;">
+      <div class="item1" style="padding: 0.5vw 5vw;">
+        <h3>Our Services</h3>
+        <p>We provide the best travel services. <br>We have many offers for you so just go for a trip.</p>
+      </div>
+      <div class="item2" style="padding: 0.5vw 5vw;">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">
+              Home</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Hotels</a>
+          </li>
+        </ul>
+      </div>
+      <div class="item3" style="padding: 0.5vw 5vw;">
+        <h3>Follow Our Page</h3>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+
+    </div>
+    <h3 style="background-color: black; margin: 0; padding: 0; color: white; text-align: center;">&copy; 2021 Copyright:
+      kiettravels.com</h3>
+  </footer>
+</body>
+
+</html>

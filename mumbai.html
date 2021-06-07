@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>KIET TRAVEL</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .wrapper {
+            /* border : 2px solid #000;  */
+            overflow: hidden;
+        }
+
+        .wrapper div {
+            min-height: 200px;
+            padding: 10px;
+        }
+
+        .item1 {
+            /* background-color: gray; */
+            float: left;
+            /* margin-right:.5vw; */
+            width: 18rem;
+            /* border-right:2px solid #000; */
+        }
+
+        .item2 {
+            /* background-color: white; */
+            overflow: hidden;
+            margin: 10px;
+            /* border:2px dashed #ccc; */
+            min-height: 170px;
+        }
+
+        @media screen and (max-width: 400px) {
+            .item1 {
+                float: none;
+                margin-right: 0;
+                width: auto;
+                border: 0;
+                border-bottom: 2px solid #000;
+            }
+        }
+
+        .item2 img {
+            max-width: 40vw;
+            height: 30vw;
+         /* display: flex;
+         justify-content: center; */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Places</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">restaurant</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Offers
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">10% Off*</a></li>
+                            <li><a class="dropdown-item" href="#">25% Off*</a></li>
+                            <li><a class="dropdown-item" href="#">50% Off*</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <nav class="navbar navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <form class="d-flex">
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button> -->
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" style="margin: 0.5vw">
+                            Login
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="justify-content: center; background-color: rgb(236, 219, 162);">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Login Form</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="login">
+                                            <label>
+
+                                                <b>User Name</b><br>
+
+                                            </label>
+                                            <input type="text" name="uname" id="uname" placeholder="username">
+                                            <br><br>
+                                            <label>
+                                                <b>Password</b>
+                                            </label>
+                                            <input type="password" name="password" id="password"
+                                                placeholder="Enter Your Password">
+                                            <br><br>
+                                            <input type="checkbox" id="check">
+                                            <text-align="center" span>Remember Me</span>
+                                                <br><br>
+                                                <a href="#">Forgot Password</a> <br><br>
+                                                <div class="d-grid gap-2">
+                                                    <button class="btn btn-primary" type="button">LOGIN</button>
+
+                                                </div>
+                                                <!-- <input type="button" name="login" id="login" value="LOGIN"> -->
+                                                <br>
+                                        </form>
+                                        <br>
+                                        <p><B>OR LOGIN WITH</B></p>
+                                        <ul>
+                                            <li><a href="https://www.linkedin.com/in/angel-baa827205">linkedin</a></li>
+                                            <li><a href="https://www.gmail.com/angel?r=nametag"> Gmail</a> </li>
+                                            <li><a href="https://www.instagram.com/angel?r=nametag"> Instagram</a> </li>
+
+                                            <br>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" style="margin: 0.5vw;">
+                            Signup
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>REGISTER</h3>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" style="margin: 0.5vw">
+                            Booking
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+
+    <!--div class="container" style="margin: 0; padding: 0;">
+   
+  </div>
+  <img src="https://www.rajasthandirect.com/wp-content/uploads/2017/06/Delhi-Golden-Triangle-Guide.jpg" alt=""
+    style="width: 100vw;"-->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 45vw;">
+                <img src="https://assets.wallpapersin4k.org/uploads/2017/04/Gateway-Of-India-Wallpaper-7.jpg"
+                    class="d-block w-100" alt="..." style="height: 45vw;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Gateway Of India</h5>
+                    <!-- <p>The one who left behind his tale of glory, <br>Your engraved name still tells your story.</p> -->
+                </div>
+            </div>
+            <div class="carousel-item" style="height: 45vw;">
+                <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/103/103703163.jpg" class="d-block w-100"
+                    alt="..." style=" height: 45vw;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>The Taj Palace</h5>
+                    <p>Collect moments not things.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" style="height: 45vw;">
+            <img src="https://www.emperortraveline.com/wp-content/uploads/2020/12/Marine-drive.jpg"
+                class="d-block w-100" alt="..." style="height: 45vw;">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Marine Drive</h5>
+                <!-- <p>The Red Fort was the residence of the Mughal<br> emperor of India for nearly 200 years.</p> -->
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <p style="text-align: center; font-size: 3vw; color: rgb(153, 0, 255); margin: 0vw 8vw;">Best Places To Visit In
+        Mumbai
+    </p>
+    <br><br>
+    <h2 style="text-align: center;">HIGHLIGHTS</h2>
+    <p style="font-size: 1rem; padding: 1.5vw 4vw;">Delhi is both a union territory within India, as well as a city,
+        and
+        features two very
+        different worlds: New Delhi and Old Delhi. The former, inaugurated by the British in 1931 to serve as the
+        imperial
+        capital, is the nation's modern capital and seat of government, while Old Delhi is considered by many as the
+        symbolic heart of the greater metropolitan area. <br>One of the most populous regions in the world, Delhi is a
+        heady
+        mix of tradition and modernity, important as both a religious center and India's busiest international gateway.
+        Its
+        history is as old as the ancient Yamuna River, one of the most sacred rivers in Hinduism and a natural dividing
+        line
+        between New Delhi to the west and Old Delhi to the east.<br>Things to see and do in Delhi and New Delhi are
+        plentiful and include experiencing its diverse arts and crafts industry; its many magnificent monuments;
+        countless
+        performing arts venues; and its excellent cuisine, including delicacies from every corner of India. Delhi is
+        also a
+        shopper's paradise with numerous bazaars and markets, including Chandni Chowk, the country's most famous
+        commercial
+        area.</p>
+    <div class="wrapper">
+        <div class="item1" style=" margin: 1vw 2vw; padding: 1vw;">
+            <h2>More Destinations</h2><br>
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.planetware.com/photos-large/IND/india-delhi-india-gate.jpg" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Top-Rated Tourist Attractions in Delhi
+
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="index.html" class="btn btn-primary">Go To Delhi</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.planetware.com/photos-tiles/india-agra-top-attractions-taj-mahal-thumb.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Top-Rated Attractions & Places to Visit in Agra
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go To Agra</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.planetware.com/photos-tiles/india-amritsar-top-attractions-golden-temple-thumb.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Top-Rated Attractions & Places to Visit in Amritsar
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go To Amritsar</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.planetware.com/photos-tiles/india-jaipur-top-attractions-galta-ji-thumb.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Top-Rated Attractions & Places to Visit in Jaipur
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go To Jaipur</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.planetware.com/photos-tiles/india-varanasi-best-places-to-visit-ganges-river-thumb.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Best Places to Visit in Varanasi
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go To Varanasi</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.planetware.com/photos-tiles/india-goa-top-attractions-anjuna-market-thumb.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Top-Rated Tourist Attractions in Goa
+
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go To Goa</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.alkofholidays.com/admin/uploads/2019/12/AH-13389-Mathura-Vrindavan-Tour-Package.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Best Places to Visit in Mathura-Vrindavan
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go To Mathura</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.thepalaceonwheels.org/blog/wp-content/uploads/2020/02/Lonavala-1024x685.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Best Places to Visit in Meghalaya
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go To Meghalaya</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.mYFqj5YqdU228z31lYGjiAEvDN&pid=Api&P=0&w=241&h=164"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Best Places to Visit in Rishikesh
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go To Rishikesh</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.mDoW07IGhC9JZM1xg7AyfwHaE8&pid=Api&P=0&w=236&h=159"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Best Places to Visit in Asam
+                    </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Asam</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="item2" style=" margin: 1vw 2vw; padding: 1vw;">
+            <h2>1.Marine Drive (22 km from Mumbai Airport)</h2>
+            <img src="https://d2r4vjqv0e4e2o.cloudfront.net/blog/wp-content/uploads/2019/05/27102506/marine-drive-mumbai.jpg"
+                alt="">
+            <p>Popularly referred to as the Queen’s Necklace, Marine Drive is a 4 km long promenade located in South
+                Bombay. One of the most beautiful roads in Mumbai, a birds-eye view of this stretch looks magnificent at
+                night with the lights making the entirety resemble a queen’s necklace. This beautiful place in Mumbai
+                comes alive in the evenings when people relax and admire the brilliant view or take a walk on the
+                promenade overlooking the Arabian Sea that is surprisingly therapeutic to the soul. Chai-wallas,
+                chat-wallas are added bonuses to the place making it another must-visit tourist place as well as an
+                important part of the Mumbai nightlife.
+                <br>
+                Large groups of people are seen crowding the place to walk along the lovely walkway and to witness the
+                dazzling sight of the setting sun at nightfall. The splendidly lined palm trees offer its guests an
+                exciting background. Marine Drive is also alluded to as ‘Queen's necklace', due to the streetlights that
+                make the road look like a string of pearls and create an illusion of a necklace. Marine Drive is
+                considered as the best pathway for a night walk.
+            <h3>Location: Mumbai, Maharashtra, 400004, India</h3>
+            </p><br>
+            <h2>2.
+                Gateway of India (25 km from Mumbai Airport)</h2>
+            <img src="https://bestplacesofindia.com/wp-content/uploads/2019/12/Gateway-of-India-bn.jpg" alt="">
+            <p>One of the most distinguishing landmarks that signify the city, the Gateway of India came into existence
+                in the year 1924 during the British Raj to celebrate the arrival of King George V and Queen Mary to
+                Bombay. The structure marks the area as one of India’s major ports which formally symbolised elements of
+                British grandeur. Located in the waterfront area of Apollo Bunder, today it is one of the most popular
+                tourist places in Mumbai for people from all over the globe who flock just for a glance at this
+                monument.
+                <br>
+                The Gateway of India is a landmark that denotes India's main ports and is a noteworthy vacation
+                destination for guests who touch base in India surprisingly. At a certain point in time, this landmark
+                spoke to the greatness of the British Raj in India. A most loved spot for visitors, these days, and this
+                landmark pulls in vendors, food stalls and also the photography buffs. The passing of the First
+                Battalion of the Somerset Light Infantry; was recorded as the primary headliner that occurred at the
+                Gateway of India.
+                <br>
+                The design plan of the Gateway of India is constituted of a vast curve, with tallness of 26m. The
+                landmark is worked in yellow basalt and insoluble cement. The basic arrangement of Gateway of India is
+                outlined in the Indo-Saracenic style.
+                <br>
+            <h3>Location: Gateway of India is located at Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</h3>
+            </p><br>
+            <h2>
+                3. Colaba Causeway Market (26 km from Mumbai Airport)</h2>
+            <img src="http://1.bp.blogspot.com/-u0GMAO57Dls/V7M7khJNI6I/AAAAAAAAW54/k6KOsCJRiYEwjcVW6kch_oKbNbTNzjXrACK4B/s1600/Colaba%2BCauseway.jpg"
+                alt="">
+            <p>From cheap road garments to in vogue boutiques, this path, which houses old structures from the British
+                Raj, has it all. Colaba Causeway, also known as Shahid Bhagat Singh Road, is one of the best places in
+                Mumbai for shopping and is a business road, and a noteworthy thoroughfare or land connect amongst Colaba
+                and the Old Woman's Island in the city of Mumbai, India. While you can walk around the trails and search
+                for garments, shoes, totes, and even gems in the most recent plans, you can likewise venture into one of
+                the boutiques and take a gander at stunning decorations, garments, and so forth.
+                <br>
+                The road merchants offer the most recent form at disposable costs, which can be expected all things
+                considered. It is constantly great to invest some energy here; you never realise what take you will
+                discover. You may locate the "fixed rate" board composed of the city side shops yet one should know how
+                to deal and cut down the cost. It resembles an extremely normal Indian Road bazaar. In the event that
+                you investigate more, you can likewise get your name composed of a rice grain or, can get it engraved on
+                a memento.
+                <br>
+            <h3>Location: Colaba Causeway market is located at Bakery Ln, Army Area Mumbai, Maharashtra 400005
+            </h3>
+            </p><br>
+            <h2>4.
+                Siddhivinayak Temple (11 km from Mumbai Airport)</h2>
+            <img src="https://guidetour.in/wp-content/uploads/2018/09/Mumbai-Siddhivinayak-Temple.jpg" alt="">
+            <p>A Hindu temple dedicated to the Lord Shri Ganesh is a standing testament to beauty and architecture.
+                Constructed in 1801, the temple entertains thousands of devotees every single day. Even Bollywood
+                celebrities, as well as other prominent figures, climb up to the temple to seek blessings and offer
+                prayers to Lord Ganesha that is its magnetism. In all, the temple is definitely among the popular
+                tourist places to visit in Mumbai.
+                <br>
+                The Siddhivinayak Mandir evolved from a little place of worship to the Grand Temple that stands today in
+                the later 50% of the twentieth century. Temple glory was purchased not just by the lawmakers who
+                frequented the sanctuary additionally Bollywood film stars who ceaselessly visit to look for the gifts
+                of Lord Ganesha. Siddhivinayak is notable as "Navasacha Ganapati" or "Navasala Pavanara Ganapati" among
+                devotees.
+                <br>
+                It was Constructed on 19 November 1801, the first structure of the Siddhivinayak Temple was a little 3.6
+                m x 3.6 m square block structure with an arch molded block shikhara. The sanctuary was worked by the
+                temporary worker Laxman Vithu Patil. The building was financed by a rich Agri lady named Deubai Patil.
+                Childless, Deaubai manufactured the sanctuary so that the Lord should concede youngsters to other
+                infertile ladies. Ramakrishna Jambhekar Maharaj, a supporter of the Hindu holy person Akkalkot Swami
+                Samarth, covered two divine idols in the front of the directing god of the temple on the requests on his
+                master.
+                <br>
+            <h3>Location: Siddhivinayak Temple is located at S.K.Bole Marg, Prabhadevi, Mumbai, Maharashtra 400028</h3>
+            </p><br>
+            <h2>5. Juhu Beach (6 Km from Mumbai Airport)</h2>
+            <img src="https://amazingindiablog.in/wp-content/uploads/2016/07/Juhu-Beach-Sunset-1024x663.jpg" alt="">
+            <p>Juhu can be defined as one of the largest and most sought after beaches in India. It is a hot-spot for
+                elite celebrity homes and film personality sightings located in the suburbs of the city making it one of
+                the most eminent tourist places to visit in Mumbai. Visitors all over the country love the beach for it
+                is also a gastronomic paradise hosting stalls that serve up platters of lip-smacking street food. The
+                sandy delight is most crowded during weekends where people can get entertained by horse and donkey
+                rides, dancing monkeys, toy sellers and other kinds of amusement.
+                <br>
+                Sightseers visit this shoreline in view of its serene climate and its grand excellence. Juhu Beach is
+                additionally well known for its nearby indulgences and road nourishment. The sustenance slows down to
+                set up here offer incredible cooking styles and nibbles things. Individuals in Mumbai visit this
+                shoreline to unwind and appreciate the dreary day. This is one of the most famous Mumbai tourist places.
+                <br>
+            <h3>Location: Juhu Tara Road, Juhu, Mumbai, Maharashtra, 400049, India</h3>
+            </p>
+        </div>
+    </div>
+    <div class="containermap">
+        <h3>Find Your Destination Root On Map</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.2132807979283!2d72.87198911437713!3d19.098297156235308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c97337c793d7%3A0x6dbd2fd9625bb8eb!2sMumbai%20Airport%20(BOM)!5e0!3m2!1sen!2sin!4v1622911586916!5m2!1sen!2sin"
+            width="600" height="450" style="border: none; width: 100vw; margin: 1vw; padding: 1vw;" allowfullscreen=""
+            loading="lazy"></iframe>
+
+    </div>
+    <footer style="background-color: #0d6efd; padding: 1vw;">
+
+        <div class="footer" style="display: flex;">
+            <div class="item1" style="padding: 0.5vw 5vw;">
+                <h3>Our Services</h3>
+                <p>We provide the best travel services. <br>We have many offers for you so just go for a trip.</p>
+            </div>
+            <div class="item2" style="padding: 0.5vw 5vw;">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">
+                            Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Hotels</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="item3" style="padding: 0.5vw 5vw;">
+                <h3>Follow Our Page</h3>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+
+        </div>
+        <h3 style="background-color: black; margin: 1vw; padding: 1vw; color: white; text-align: center;">&copy; 2021
+            Copyright:
+            kiettravels.com</h3>
+    </footer>
+</body>
+
+</html>
